@@ -43,9 +43,9 @@ fn dt_as_naive<D: Datelike + Timelike>(dt: D) -> NaiveDateTime {
 #[derive(Clone)]
 pub struct OpeningHours<L = NoLocation> {
     /// Rules describing opening hours
-    rules: Vec<RuleSequence>,
+    pub rules: Vec<RuleSequence>,
     /// Execution context for opening hours
-    ctx: Context<L>,
+    pub ctx: Context<L>,
 }
 
 impl OpeningHours<NoLocation> {

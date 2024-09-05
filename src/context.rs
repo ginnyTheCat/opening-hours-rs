@@ -22,15 +22,15 @@ pub static REGION_HOLIDAYS: Lazy<HashMap<&str, CompactCalendar>> = Lazy::new(|| 
         .collect()
 });
 
-const EMPTY_CALENDAR: &CompactCalendar = &CompactCalendar::new();
+pub const EMPTY_CALENDAR: &CompactCalendar = &CompactCalendar::new();
 
 /// TODO: doc
 #[derive(Clone, Debug)]
-pub(crate) struct Context<L = NoLocation> {
+pub struct Context<L = NoLocation> {
     /// The sorted list of holidays
-    pub(crate) holidays: &'static CompactCalendar,
+    pub holidays: &'static CompactCalendar,
     /// Localisation infos
-    pub(crate) localize: L,
+    pub localize: L,
 }
 
 impl Default for Context<NoLocation> {

@@ -8,7 +8,7 @@ pub mod localize;
 pub mod opening_hours;
 pub mod time_filter;
 
-mod context;
+pub mod context;
 mod utils;
 
 #[cfg(test)]
