@@ -155,7 +155,7 @@ mod feat_localize {
         }
 
         fn event_time(&self, date: NaiveDate, event: TimeEvent) -> NaiveTime {
-            use sunrise::{DawnType, SolarDay, SolarEvent};
+            use sunrise_next::{DawnType, SolarDay, SolarEvent};
 
             let solar_event = match event {
                 TimeEvent::Dawn => SolarEvent::Dawn(DawnType::Civil),
